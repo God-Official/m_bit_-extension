@@ -38,8 +38,8 @@ namespace mbit_Sound{
     //% value.min=0 value.max=1
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=8
     export function Buzzer( value: enBuzzer): void {
-        pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P16, value);
+        pins.setPull(DigitalPin.P13, PinPullMode.PullNone);
+        pins.digitalWritePin(DigitalPin.P13, value);
     }
 
     //% blockId=mbit_Music_Car block="Music_Car|%index"
