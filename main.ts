@@ -864,7 +864,7 @@ namespace mbit_Sensor {
         pins.digitalWritePin(DigitalPin.P14, 0);
 
         // read pulse
-        let d = pins.pulseIn(DigitalPin.P15, PulseValue.High, 23200);
+        let d = pins.pulseIn(DigitalPin.P15, PulseValue.High, 43200);
         return Math.floor((d / 2) / 29.1);
     }
 }
