@@ -483,7 +483,7 @@ namespace mbit_Car{
             control.waitMicros(15);
             pins.digitalWritePin(DigitalPin.P14, 0);
 
-            let d = pins.pulseIn(DigitalPin.P15, PulseValue.High, 23200);
+            let d = pins.pulseIn(DigitalPin.P15, PulseValue.High, 43200);
             list[i] = Math.floor(d / 58.2)
         }
         list.sort();
