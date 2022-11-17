@@ -853,18 +853,18 @@ namespace mbit_Sensor {
     //% weight=100
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function Ultrasonic(Trig: DigitalPin.P14, Echo: DigitalPin.P15): number {
+    export function Ultrasonic(): number {
 
         // send pulse
-        pins.setPull(Trig, PinPullMode.PullNone);
-        pins.digitalWritePin(Trig, 0);
+        pins.setPull(DigitalPin.P14, PinPullMode.PullNone);
+        pins.digitalWritePin(DigitalPin.P14, 0);
         control.waitMicros(2);
-        pins.digitalWritePin(Trig, 1);
+        pins.digitalWritePin(DigitalPin.P14, 1);
         control.waitMicros(15);
-        pins.digitalWritePin(Trig, 0);
+        pins.digitalWritePin(DigitalPin.P14, 0);
 
         // read pulse
-        let d = pins.pulseIn(Echo, PulseValue.High, 23200);
+        let d = pins.pulseIn(DigitalPin.P15, PulseValue.High, 23200);
         return Math.floor((d / 2) / 29.1);
     }
 }
